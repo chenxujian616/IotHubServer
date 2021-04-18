@@ -46,7 +46,10 @@ var deviceRouter = require('./routes/devices')
 app.use('/devices', deviceRouter);
 
 var tokensRouter = require("./routes/tokens")
-app.use('/tokens',tokensRouter)
+app.use('/tokens', tokensRouter)
+
+var webHookeRouter = require("./routes/emqx_web_hook")
+app.use('/emqx_web_hook', webHookeRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
